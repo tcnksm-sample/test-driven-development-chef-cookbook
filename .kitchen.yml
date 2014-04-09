@@ -1,0 +1,16 @@
+---
+driver:
+  name: digitalocean
+  region: singapore 1
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-12.04
+  - name: centos-6.4
+
+suites:
+  - name: default
+    run_list:
+    attributes:

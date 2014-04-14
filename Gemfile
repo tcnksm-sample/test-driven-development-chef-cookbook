@@ -21,4 +21,3 @@ gem 'test-kitchen'
 gem 'kitchen-digitalocean' # driver
 gem 'serverspec'           # busser
 
-gem 'dotenv'

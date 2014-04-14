@@ -1,6 +1,9 @@
 Test Driven Development for Chef cookbooks
 ====
 
+[![Build Status](https://travis-ci.org/tcnksm/test-driven-cookbook-development.svg?branch=master)](https://travis-ci.org/tcnksm/test-driven-cookbook-development) [![Dependency Status](https://gemnasium.com/tcnksm/test-driven-cookbook-development.svg)](https://gemnasium.com/tcnksm/test-driven-cookbook-development)
+
+
 ## Overview
 
 ### Static test

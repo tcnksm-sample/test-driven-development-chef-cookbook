@@ -2,3 +2,5 @@
 vendor
 .env
 .kitchen
+Gemfile.lock
+.vagrant

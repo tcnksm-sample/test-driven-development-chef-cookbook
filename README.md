@@ -1,7 +1,9 @@
 Test Driven Infrastructure
 ====
 
-[![Build Status](https://travis-ci.org/tcnksm/test-driven-cookbook-development.svg?branch=master)](https://travis-ci.org/tcnksm/test-driven-cookbook-development) [![Coverage Status](https://coveralls.io/repos/tcnksm/test-driven-cookbook-development/badge.png)](https://coveralls.io/r/tcnksm/test-driven-cookbook-development) [![Dependency Status](https://gemnasium.com/tcnksm/test-driven-cookbook-development.svg)](https://gemnasium.com/tcnksm/test-driven-cookbook-development)
+
+[![Build Status](https://travis-ci.org/tcnksm/test-driven-infra.svg?branch=master)](https://travis-ci.org/tcnksm/test-driven-infra)
+
 
 
 ## What is this ?

@@ -1,11 +1,19 @@
-Test Driven Development for Chef cookbooks [![Build Status](https://travis-ci.org/tcnksm/test-driven-cookbook-development.svg?branch=master)](https://travis-ci.org/tcnksm/test-driven-cookbook-development) [![Coverage Status](https://coveralls.io/repos/tcnksm/test-driven-cookbook-development/badge.png)](https://coveralls.io/r/tcnksm/test-driven-cookbook-development) [![Dependency Status](https://gemnasium.com/tcnksm/test-driven-cookbook-development.svg)](https://gemnasium.com/tcnksm/test-driven-cookbook-development)
+Test Driven Infrastructure
 ====
+
+[![Build Status](https://travis-ci.org/tcnksm/test-driven-cookbook-development.svg?branch=master)](https://travis-ci.org/tcnksm/test-driven-cookbook-development) [![Coverage Status](https://coveralls.io/repos/tcnksm/test-driven-cookbook-development/badge.png)](https://coveralls.io/r/tcnksm/test-driven-cookbook-development) [![Dependency Status](https://gemnasium.com/tcnksm/test-driven-cookbook-development.svg)](https://gemnasium.com/tcnksm/test-driven-cookbook-development)
+
+
+## What is this ?
+
+This is experimental repository for myself to try building infrastructure with TDD style using Chef.
+
 
 ## Overview
 
 ### Static test
 
-- knife test command for ruby syntax check
+- [knife test](http://docs.opscode.com/knife_cookbook.html#test) for ruby syntax check
 - [foodcritic](http://acrmp.github.io/foodcritic/) for lint
 - [chefspec](https://github.com/sethvargo/chefspec) for unit-test
 
@@ -23,20 +31,33 @@ Use Test-kitchen
 
 ## How to create cookbook
 
+
+### Setup
+
 At first, install all dependencies
 
 ```bash
 $ bundle install --path vendor/bundle --binstubs .bundle/bin
 ```
 
-Create `.env` from `.env.org`.
+Create `.env` file for kitchen-digitalocean secret key.
 
-```bash
-$ cp .env.org .env
-$ emacs .env
+```ruby
+DIGITALOCEAN_CLIENT_ID: ""
+DIGITALOCEAN_API_KEY: ""
+SSH_KEY_IDS: ""
 ```
 
-While develop, run static test
+Enable [dotenv](https://github.com/bkeepers/dotenv) in `bin/kitchen`
+
+```ruby
+require 'dotenv'
+Dotenv.load
+```
+
+### Development
+
+Run static test with guard
 
 ```bash
 $ bundle exec guard
@@ -48,14 +69,13 @@ Create cookbook. By [knife-spec](https://github.com/sethvargo/knife-spec), this 
 $ bundle exec knife cookbook create httpd
 ```
 
-After develop, run dynamic (integrate) test
+Run dynamic (integrate) test at end.
 
 ```bash
 $ bundle exec rake kitchen:all
 ```
 
-## How to start
-
+## How to start this repository
 
 ### Guard
 

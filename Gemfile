@@ -7,7 +7,7 @@ gem 'chef'
 gem 'knife-solo'
 
 # Lint
-gem 'foodcritic', github: "acrmp/foodcritic"
+gem 'foodcritic', git: "http://github.com/acrmp/foodcritic"
 
 # Unit test
 gem 'chefspec'
@@ -20,4 +20,4 @@ gem 'guard-rake'
 gem 'test-kitchen'
 gem 'kitchen-digitalocean' # driver
 gem 'serverspec'           # busser
-
+gem 'dotenv'

@@ -1,6 +1,7 @@
 # Cookbook Name:: nginx
 # Recipe:: default
 
+
 execute "apt-get update"
 
 package "nginx" do
